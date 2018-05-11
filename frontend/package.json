@@ -7,14 +7,18 @@
     "hoek": "^5.0.3"
   },
   "devDependencies": {
+    "axios": "^0.18.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
+    "babel-plugin-react-html-attrs": "^2.1.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "bootstrap": "^4.1.1",
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
+    "font-awesome": "^4.7.0",
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^4.2.0",
     "node-sass": "^4.9.0",

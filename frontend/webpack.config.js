@@ -27,6 +27,10 @@ module.exports = {
                exclude: /node_modules/,
             },
             {
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                loader: "file-loader?name=font-[hash:6].[ext]&outputPath=./fonts"
+              },
+            {
                 test: /\.(gif|png|jpe?g|svg)/i,
                 use: [
                     "file-loader?name=img-[hash:6].[ext]&outputPath=./images",
@@ -51,6 +55,13 @@ module.exports = {
                     },
                 ]
             },
+            {
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                  fallback: "style-loader",
+                  use: "css-loader"
+                })
+              },
             {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract(
