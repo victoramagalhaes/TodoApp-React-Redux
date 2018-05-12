@@ -14,7 +14,8 @@ module.exports = {
         inline: true,
         hot:true,
         watchContentBase: true,
-        port:3000
+        port:3000,
+        historyApiFallback: true
     },
     performance: {
         hints: process.env.NODE_ENV === 'production' ? "warning" : false

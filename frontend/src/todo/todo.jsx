@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import history from '../main/history.js' 
 
 export default class Todo extends Component {
     render(){
