@@ -12,9 +12,9 @@ export default props => (
         <div>
         <Menu/>
         </div>
-        <div className="container-fluid">
-        <Todo />
-        <About />
-        </div>
+            <div className="container-fluid">
+            <Todo />
+            <About />
+            </div>
     </div>
 )
