@@ -1,3 +1,5 @@
+$cinzameioclaro: #c9c9c9;
+
 body,html{
     margin:0px;
     padding:0px;
@@ -5,4 +7,8 @@ body,html{
 .nopadding{
     padding-right:0px;
     padding-left:0px;
+}
+.bgcinza{
+    color:$cinzameioclaro;
+    font-size:21px;
 }
