@@ -1,8 +1,9 @@
 import React from 'react'
 import Grid from '../template/grid.jsx'
 import IconButton from '../template/iconButton.jsx'
+import { connect } from 'react-redux'
 
-export default props => {
+const TodoForm = props => {
     const EnterClick = (e) => {
         if (e.key === "Enter"){
             e.shiftKey ? props.handleSearch() : props.handleAdd()
@@ -35,3 +36,6 @@ export default props => {
         </div>
     )
 }
+
+const MapStateToProps = state => ({description: state.todo.description})
+export default connect(MapStateToProps)(TodoForm)

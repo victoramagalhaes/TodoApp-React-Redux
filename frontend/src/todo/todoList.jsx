@@ -1,7 +1,8 @@
 import React from 'react'
 import IconButton from '../template/iconButton.jsx'
+import { connect } from 'react-redux'
 
-export default props =>{
+const TodoList = props =>{
     
     const renderRows = () => {
         const list = props.list || []
@@ -20,7 +21,6 @@ export default props =>{
         </tr>
     ))
 }
-
     return (
         <table className="table marginup">
             <thead className="thead-light">
@@ -34,3 +34,7 @@ export default props =>{
             </tbody>
         </table>
     )}
+
+const mapStateToProps = state => ({list: state.todo.list})
+
+export default connect(mapStateToProps)(TodoList)

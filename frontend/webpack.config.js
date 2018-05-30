@@ -1,6 +1,7 @@
 var config = require("./webpack.config.js");
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
     entry: "./src/index.jsx",
@@ -77,6 +78,7 @@ module.exports = {
         new ExtractTextPlugin(
           {filename: 'app.css'}
         ),
+        new OptimizeCssAssetsPlugin(),
         new HtmlWebpackPlugin({
           inject: false,
           hash: true,
